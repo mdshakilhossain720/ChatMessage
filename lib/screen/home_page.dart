@@ -5,6 +5,7 @@ import 'package:chatapp/pages/notifaction.dart';
 import 'package:chatapp/theme.dart';
 import 'package:chatapp/widgets/avtar.dart';
 import 'package:chatapp/widgets/glowing_action_button.dart';
+import 'package:chatapp/widgets/helpers.dart';
 import 'package:chatapp/widgets/icon_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
   final ValueNotifier<String> title = ValueNotifier('Messages');
 
   final pages = const [
-    MessageScreen(),
+    MessagesPage(),
     NotifactionScreen(),
     CallPage(),
     ContractPage(),
@@ -55,7 +56,7 @@ class HomeScreen extends StatelessWidget {
             child: Hero(
               tag: 'hero-profile-picture',
               child: Avatar.small(
-                // url: context.currentUserImage,
+                url: Helpers.randomPictureUrl(),
                 onTap: () {
                   //  Navigator.of(context).push(ProfileScreen.route);
                 },
