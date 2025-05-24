@@ -1,3 +1,4 @@
+import 'package:chatapp/screen/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class MessagesPage extends StatelessWidget {
@@ -99,7 +100,12 @@ class _MessageTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const ChatScreen()),
+        );
+      },
       child: Container(
         height: 100,
         margin: const EdgeInsets.symmetric(horizontal: 8),
