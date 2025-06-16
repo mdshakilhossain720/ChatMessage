@@ -58,7 +58,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
         ],
       ),
-      body: Column(children: [Expanded(child: DemoMessageList())]),
+      body: Column(children: [DemoMessageList()]),
     );
   }
 }
@@ -68,21 +68,16 @@ class DemoMessageList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        _DateLable(label: 'Yesterday'),
-        _MessageTile(message: Message(text: 'Hello'), messagedata: 'Hello'),
-      ],
-    );
+    return ListView(children: [_DateLable(label: 'Yesterday'),
+    _MessageTile(message: Message(text: 'Hello'), messagedata: 'Hello'),
+    
+    
+    ]);
   }
 }
 
 class _MessageTile extends StatelessWidget {
-  const _MessageTile({
-    super.key,
-    required this.message,
-    required this.messagedata,
-  });
+  const _MessageTile({super.key, required this.message, required this.messagedata});
 
   final Message message;
   final String messagedata;
