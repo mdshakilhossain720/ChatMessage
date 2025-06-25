@@ -7,14 +7,14 @@ class ChatListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.background,
+      //backgroundColor: AppColor.background,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Chat List',
-              style: TextStyle(color: AppColor.text, fontSize: 20),
+             // style: TextStyle(color: AppColor.text, fontSize: 20),
             ),
           ],
         ),
