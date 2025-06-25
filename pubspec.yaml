@@ -40,6 +40,7 @@ dependencies:
   jiffy: ^6.4.3
   stream_chat_flutter_core: ^9.10.0
   pusher_channels_flutter: ^2.5.0
+  riverpod: ^2.6.1
 
 dev_dependencies:
   flutter_test:
